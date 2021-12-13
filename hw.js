@@ -9,19 +9,21 @@
 
 const radio = {
     stations:[
-      {  name:"jamin",
+      {  name:["jamin", " Hott 98", "flexicon"],
         songs:{
-           title:["bye bye bye", "cry me a river"],
-        artists:  ['nysync']
+           title:["bye bye bye", "cry me a river", "motorboat"],
+        artists:  ['nysync', "jt","tory Lanez"]
         }
        
     }],
 randomStation(){
-let random = Math.floor(Math.random() * 2)
+let random = Math.floor(Math.random() * 3)
 if(random === 0){
-    console.log(`Now playing ${radio.stations[0].name}  ${radio.stations[0].songs.title[0]} by ${radio.stations[0].songs.artists}`)
+    console.log(`Now playing ${radio.stations[0].name[0]}  ${radio.stations[0].songs.title[0]} by ${radio.stations[0].songs.artists[0]}`)
 }else if(random === 1){
-console.log(`other station`)
+console.log(`Now playing ${radio.stations[0].name[1]}  ${radio.stations[0].songs.title[1]} by ${radio.stations[0].songs.artists[1]}`)
+}else {
+    console.log(`Now playing ${radio.stations[0].name[2]}  ${radio.stations[0].songs.title[2]} by ${radio.stations[0].songs.artists[2]}`)
 }
 }
 }
